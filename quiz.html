@@ -1,0 +1,45 @@
+  <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+integrity=
+"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+crossorigin="anonymous">
+
+<form method="post" class="container" id="sheetdb-form"
+  action="https://sheetdb.io/api/v1/acy1y9r3p7zoj">
+  <div class="card">
+<div class="card-body">
+<div class="form-group">
+<label for="exampleFormControlInput1">
+Name
+</label>
+
+    <input class="form-control" placeholder="" required name="data[Name]">
+   <label for="exampleFormControlInput1">
+Email
+</label>
+    <input type="email" class="form-control" placeholder="" required name="data[Email]">
+    <label for="exampleFormControlInput1">
+Contact Number
+</label>
+     <input type="number" class="form-control" placeholder="" required name="data[Contact Number]">
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+    </div>
+    </div>
+</form>
+
+<script>
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      alert('success')
+    });
+  });
+</script>

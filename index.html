@@ -51,6 +51,11 @@
 						let rowClass&SectionNode = document.createTextNode(rowInfo["Class & Section"])
 						rowClass&Section.appendChild(rowWrittenNode)
 						rowClass&Section.classList.add("Class & Section")
+						
+						let rowTimestamp = document.createElement("p")
+						let rowTimestampNode = document.createTextNode(rowInfo["Timestamp"])
+						rowTimestamp.appendChild(rowWrittenNode)
+						rowTimestamp.classList.add("Timestamp")
 
 						
 						let rowVideo = document.createElement("button")
@@ -62,6 +67,7 @@
 
 						rowInfoDiv.appendChild(rowName)
 						rowInfoDiv.appendChild(rowClass&Section)
+						rowInfoDiv.appendChild(rowTimestamp)
 						rowInfoDiv.appendChild(rowVideo)
 
 						allNamesElm.appendChild(rowInfoDiv)

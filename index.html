@@ -41,6 +41,11 @@
 
 						let rowInfoDiv = document.createElement("div")
 						rowInfoDiv.classList.add("name-row")
+						
+						let rowTimestamp = document.createElement("p")
+						let rowTimestampNode = document.createTextNode(rowInfo["Timestamp"])
+						rowTimestamp.appendChild(rowWrittenNode)
+						rowTimestamp.classList.add("Timestamp")
 
 						let rowName = document.createElement("h4")
 						let rowNameNode = document.createTextNode(rowInfo["Name"])
@@ -52,10 +57,7 @@
 						rowClass.appendChild(rowWrittenNode)
 						rowClass.classList.add("Class")
 						
-						let rowTimestamp = document.createElement("p")
-						let rowTimestampNode = document.createTextNode(rowInfo["Timestamp"])
-						rowTimestamp.appendChild(rowWrittenNode)
-						rowTimestamp.classList.add("Timestamp")
+						
 
 						
 						let rowVideo = document.createElement("Video")
@@ -65,9 +67,10 @@
 						rowVideo.type = "video/mp4"
 						rowVideo.classList.add("Video")
 
+						rowInfoDiv.appendChild(rowTimestamp)
 						rowInfoDiv.appendChild(rowName)
 						rowInfoDiv.appendChild(rowClass)
-						rowInfoDiv.appendChild(rowTimestamp)
+						
 						rowInfoDiv.appendChild(rowVideo)
 
 						allNamesElm.appendChild(rowInfoDiv)

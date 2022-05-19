@@ -32,7 +32,7 @@
 			errorMessageElm.style.display = "block"
 		}
 			
-		fetch("https://api.apispreadsheets.com/data/hPNqxXaGP4r2QSMv/").then(res=>{
+		fetch("https://api.apispreadsheets.com/data/jv5RvpyKS1i7h3Re/").then(res=>{
 			if (res.status === 200){
 				res.json().then(data=>{
 					const yourData = data["data"]
@@ -43,22 +43,22 @@
 						rowInfoDiv.classList.add("name-row")
 
 						let rowName = document.createElement("h4")
-						let rowNameNode = document.createTextNode(rowInfo["name"])
+						let rowNameNode = document.createTextNode(rowInfo["Name"])
 						rowName.appendChild(rowNameNode)
-						rowName.classList.add("name")
+						rowName.classList.add("Name")
 
 						let rowWritten = document.createElement("p")
-						let rowWrittenNode = document.createTextNode(rowInfo["written"])
+						let rowWrittenNode = document.createTextNode(rowInfo["Class & Section"])
 						rowWritten.appendChild(rowWrittenNode)
-						rowWritten.classList.add("written")
+						rowWritten.classList.add("Class & Section")
 
 						
-						let rowVideo = document.createElement("video")
+						let rowVideo = document.createElement("button")
 						rowVideo.id = "video-player"
 						rowVideo.controls = "controls"
-						rowVideo.src = rowInfo["video"]
+						rowVideo.src = rowInfo["Video"]
 						rowVideo.type = "video/mp4"
-						rowVideo.classList.add("video")
+						rowVideo.classList.add("Video")
 
 						rowInfoDiv.appendChild(rowName)
 						rowInfoDiv.appendChild(rowWritten)

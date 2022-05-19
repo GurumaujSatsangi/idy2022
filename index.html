@@ -32,7 +32,7 @@
 			errorMessageElm.style.display = "block"
 		}
 			
-		fetch("https://api.apispreadsheets.com/data/oooOl3WfsOAlP4jS/").then(res=>{
+		fetch("https://api.apispreadsheets.com/data/vFIvtLCFVz6DRED0/").then(res=>{
 			if (res.status === 200){
 				res.json().then(data=>{
 					const yourData = data["data"]
@@ -41,36 +41,27 @@
 
 						let rowInfoDiv = document.createElement("div")
 						rowInfoDiv.classList.add("name-row")
-						
-						let rowTimestamp = document.createElement("p")
-						let rowTimestampNode = document.createTextNode(rowInfo["Timestamp"])
-						rowTimestamp.appendChild(rowWrittenNode)
-						rowTimestamp.classList.add("Timestamp")
 
 						let rowName = document.createElement("h4")
-						let rowNameNode = document.createTextNode(rowInfo["Name"])
+						let rowNameNode = document.createTextNode(rowInfo["name"])
 						rowName.appendChild(rowNameNode)
-						rowName.classList.add("Name")
+						rowName.classList.add("name")
 
-						let rowClass = document.createElement("p")
-						let rowClassNode = document.createTextNode(rowInfo["Class"])
-						rowClass.appendChild(rowWrittenNode)
-						rowClass.classList.add("Class")
-						
-						
+						let rowWritten = document.createElement("p")
+						let rowWrittenNode = document.createTextNode(rowInfo["written"])
+						rowWritten.appendChild(rowWrittenNode)
+						rowWritten.classList.add("written")
 
 						
-						let rowVideo = document.createElement("Video")
+						let rowVideo = document.createElement("video")
 						rowVideo.id = "video-player"
 						rowVideo.controls = "controls"
-						rowVideo.src = rowInfo["Video"]
+						rowVideo.src = rowInfo["video"]
 						rowVideo.type = "video/mp4"
-						rowVideo.classList.add("Video")
+						rowVideo.classList.add("video")
 
-						rowInfoDiv.appendChild(rowTimestamp)
 						rowInfoDiv.appendChild(rowName)
-						rowInfoDiv.appendChild(rowClass)
-						
+						rowInfoDiv.appendChild(rowWritten)
 						rowInfoDiv.appendChild(rowVideo)
 
 						allNamesElm.appendChild(rowInfoDiv)
@@ -154,7 +145,7 @@ footer{
   100% { transform: rotate(360deg); }
 }
 
-.Name{
+.name{
 	color: blue;
 	display:inline-block;
 	padding: 10px;
@@ -162,16 +153,12 @@ footer{
 	text-align: center;
 }
 
-.Class{
-	display:inline-block;
-	text-align: center;
-}
-	    .Timestamp{
+.written{
 	display:inline-block;
 	text-align: center;
 }
 
-.Video{
+.video{
 	display: block;
 	margin-left:auto;
 	margin-right:auto;

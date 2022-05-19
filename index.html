@@ -58,7 +58,7 @@
 						rowTimestamp.classList.add("Timestamp")
 
 						
-						let rowVideo = document.createElement("button")
+						let rowVideo = document.createElement("Video")
 						rowVideo.id = "video-player"
 						rowVideo.controls = "controls"
 						rowVideo.src = rowInfo["Video"]
@@ -160,6 +160,10 @@ footer{
 }
 
 .Class{
+	display:inline-block;
+	text-align: center;
+}
+	    .Timestamp{
 	display:inline-block;
 	text-align: center;
 }

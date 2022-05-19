@@ -47,10 +47,10 @@
 						rowName.appendChild(rowNameNode)
 						rowName.classList.add("Name")
 
-						let rowClass&Section = document.createElement("p")
-						let rowClass&SectionNode = document.createTextNode(rowInfo["Class & Section"])
-						rowClass&Section.appendChild(rowWrittenNode)
-						rowClass&Section.classList.add("Class & Section")
+						let rowClass = document.createElement("p")
+						let rowClassNode = document.createTextNode(rowInfo["Class"])
+						rowClass.appendChild(rowWrittenNode)
+						rowClass.classList.add("Class")
 						
 						let rowTimestamp = document.createElement("p")
 						let rowTimestampNode = document.createTextNode(rowInfo["Timestamp"])
@@ -66,7 +66,7 @@
 						rowVideo.classList.add("Video")
 
 						rowInfoDiv.appendChild(rowName)
-						rowInfoDiv.appendChild(rowClass&Section)
+						rowInfoDiv.appendChild(rowClass)
 						rowInfoDiv.appendChild(rowTimestamp)
 						rowInfoDiv.appendChild(rowVideo)
 
@@ -159,7 +159,7 @@ footer{
 	text-align: center;
 }
 
-.Class&Section{
+.Class{
 	display:inline-block;
 	text-align: center;
 }

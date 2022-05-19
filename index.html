@@ -47,10 +47,10 @@
 						rowName.appendChild(rowNameNode)
 						rowName.classList.add("Name")
 
-						let rowWritten = document.createElement("p")
-						let rowWrittenNode = document.createTextNode(rowInfo["Class & Section"])
-						rowWritten.appendChild(rowWrittenNode)
-						rowWritten.classList.add("Class & Section")
+						let rowClass&Section = document.createElement("p")
+						let rowClass&SectionNode = document.createTextNode(rowInfo["Class & Section"])
+						rowClass&Section.appendChild(rowWrittenNode)
+						rowClass&Section.classList.add("Class & Section")
 
 						
 						let rowVideo = document.createElement("button")
@@ -61,7 +61,7 @@
 						rowVideo.classList.add("Video")
 
 						rowInfoDiv.appendChild(rowName)
-						rowInfoDiv.appendChild(rowWritten)
+						rowInfoDiv.appendChild(rowClass&Section)
 						rowInfoDiv.appendChild(rowVideo)
 
 						allNamesElm.appendChild(rowInfoDiv)
@@ -145,7 +145,7 @@ footer{
   100% { transform: rotate(360deg); }
 }
 
-.name{
+.Name{
 	color: blue;
 	display:inline-block;
 	padding: 10px;
@@ -153,12 +153,12 @@ footer{
 	text-align: center;
 }
 
-.written{
+.Class&Section{
 	display:inline-block;
 	text-align: center;
 }
 
-.video{
+.Video{
 	display: block;
 	margin-left:auto;
 	margin-right:auto;

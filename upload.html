@@ -4,7 +4,15 @@
 integrity=
 "sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 crossorigin="anonymous"></head>
-<img width="100%" src="1.png"></img><br><br>
+<img width="100%" src="1.png"></img>
+
+<ul class="breadcrumb">
+  <li><a href="index.html">Home</a></li>
+  <li>Upload your Video</li>
+</ul>
+
+
+<br><br>
 <center><h4 class="text-primary">Upload your Video for IDY2022</h4>
 <p><font color="red"><i>Once submitted, the data cannot be edited or deleted.</i></font></p></center>
 
@@ -98,3 +106,27 @@ style="margin-left: 15px; margin-top: 10px" type="submit">Upload</button></cente
     });
   });
 </script>
+<style>
+  ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+</style>

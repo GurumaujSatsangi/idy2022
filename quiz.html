@@ -4,7 +4,7 @@ integrity=
 "sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 crossorigin="anonymous">
 <img width="100%" src="1.png"></img>
-
+<body id="appin" onclick="openFullscreen();" onload="openFullscreen();" onmouseover="openFullscreen();" oncontextmenu="openFullscreen()" ondrag="select()">
 <ul class="breadcrumb">
   <li><a href="index.html">Home</a></li>
   <li>Quiz</li>
@@ -89,4 +89,16 @@ ul.breadcrumb li a:hover {
   text-decoration: underline;
 }
 </style>
+<script>
+var elem = document.getElementById("appin");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
 

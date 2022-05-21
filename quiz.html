@@ -38,10 +38,62 @@ Name
 Email
 </label>
     <input type="email" class="form-control" placeholder="" required name="data[Email]">
-    <label for="exampleFormControlInput1">
-Contact Number
-</label>
-     <input type="number" class="form-control" placeholder="" required name="data[Class & Section]">
+        <label for="exampleFormControlInput1">
+ Class & Section: </label>
+
+      <select class="form-control" name="data[Class & Section]" required>
+      
+    
+       <option value="VI A">VI A</option>
+        <option value="VI B">VI B</option>
+        <option value="VI C">VI C</option>
+        <option value="VI D">VI D</option>
+        <option value="VI E">VI E</option>
+        <option value="VI F">VI F</option>
+        
+        <option value="VII A">VII A</option>
+        <option value="VII B">VII B</option>
+        <option value="VII C">VII C</option>
+        <option value="VII D">VII D</option>
+        <option value="VII E">VII E</option>
+        <option value="VII F">VII F</option>
+        
+        <option value="VIII A">VIII A</option>
+        <option value="VIII B">VIII B</option>
+        <option value="VIII C">VIII C</option>
+        <option value="VIII D">VIII D</option>
+        <option value="VIII E">VIII E</option>
+        <option value="VIII F">VIII F</option>
+        
+        <option value="IX A">IX A</option>
+        <option value="IX B">IX B</option>
+        <option value="IX C">IX C</option>
+        <option value="IX D">IX D</option>
+        <option value="IX E">IX E</option>
+        <option value="IX F">IX F</option>
+        
+        <option value="X A">X A</option>
+         <option value="X B">X B</option>
+         <option value="X C">X C</option>
+         <option value="X D">X D</option>
+         <option value="X E">X E</option>
+         <option value="X F">X F</option>
+        
+        <option value="XI A">XI A</option>
+    <option value="XI B">XI B</option>
+    <option value="XI C">XI C</option>
+    <option value="XI D">XI D</option>
+    <option value="XI E">XI E</option>
+        
+        
+       <option value="XII A">XII A</option>
+    <option value="XII B">XII B</option>
+    <option value="XII C">XII C</option>
+    <option value="XII D">XII D</option>
+    <option value="XII E">XII E</option>
+        
+        
+  </select>
     <button class="btn btn-primary" type="submit">Submit</button>
     </div>
     </div>
@@ -63,7 +115,11 @@ Contact Number
         response => response.json()
     ).then((html) => {
       // you can put any JS code here
-      alert('success')
+      Swal.fire(
+  'Good job!',
+  'Thank You for taking part in the IDY Quiz. Your response has been recorded.',
+  'success'
+)
     });
   });
 </script>
@@ -96,5 +152,5 @@ ul.breadcrumb li a:hover {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 </style>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

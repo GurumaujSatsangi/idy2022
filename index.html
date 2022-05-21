@@ -9,6 +9,7 @@ crossorigin="anonymous">
 <title> IVWS IDY2022 </title>
  </head>
 <body width="80%">
+<div class="main">
  <img width="100%" src="1.png"></img><br><br>
 <center> <p align="justify">IDY 2022 is the 8th edition of International Day of Yoga. On 21st June 2022, this day will be marked as 8th Edition. The United Nations General Assembly recognized 21st June as the International Day of Yoga at the initiative of Hon`ble Prime Minister of India in 2014 via a unanimous vote. <br><br>Since 2015, this day has been observed all over the world in ever growing number of participants. The observation of IDY reminds  the individuals and populations to make healthier choices like the practice of Yoga and follow such lifestyle patterns to foster good health.</p><hr>
  <h4 class="text-primary">Yoga & Me</h4>
@@ -31,6 +32,7 @@ Play Quiz
 <hr>
  <p align="center">©️ <a href="https://www.ivws.org">Indus Valley World School</p>
  <img width="100%" src="footer.png"></img>
+ </div>
 
 <style>
 p {
@@ -40,6 +42,22 @@ p {
 }
  html, body {
   height: 100%;
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
 </style>
 </body>
 </html>

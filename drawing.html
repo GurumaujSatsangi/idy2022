@@ -1,0 +1,67 @@
+ <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+integrity=
+"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+crossorigin="anonymous">
+<body onrightclick="return false">
+<img width="100%" src="1.png"></img>
+
+<ul class="breadcrumb">
+  <li><a href="index.html">Home</a></li>
+  <li>Quiz</li>
+</ul>
+
+
+ <p align="center">©️ <a href="https://www.ivws.org">Indus Valley World School</p>
+ <img width="100%" src="footer.png"></img>
+
+<script>
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      Swal.fire(
+  'Good job!',
+  'Thank You for taking part in the IDY Quiz. Your response has been recorded.',
+  'success'
+)
+    });
+  });
+</script>
+
+<style>
+  ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+  .prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+</style>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
